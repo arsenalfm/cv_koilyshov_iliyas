@@ -24,7 +24,7 @@ export function Header() {
                     animate={{ opacity: 1, x: 0 }}
                     className="flex items-center gap-4"
                 >
-                    <span className="hidden sm:block text-xs text-gray-500 dark:text-gray-400 font-mono">
+                    <span className="hidden sm:block text-xs text-gray-500 dark:text-gray-200 font-mono">
                         Алматы, Казахстан
                     </span>
                     <div className="w-px h-4 bg-gray-200 dark:bg-white/10 hidden sm:block" />

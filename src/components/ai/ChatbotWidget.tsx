@@ -6,10 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Bot, X, Send, User, Sparkles } from "lucide-react";
 
 const quickQuestions = [
-    "Опыт с AI/LLM?",
-    "Размер команды?",
-    "Ожидания?",
-    "Успешные проекты?",
+    "Опыт внедрения AI & LLM?",
+    "Главные достижения в финтехе?",
+    "Подход к управлению?",
+    "Формат работы и локация?",
 ];
 
 export function ChatbotWidget() {
@@ -73,7 +73,7 @@ export function ChatbotWidget() {
                                 className="bg-background/95 backdrop-blur border border-primary/30 rounded-2xl px-4 py-3 shadow-xl max-w-[200px] text-right"
                             >
                                 <p className="text-xs font-medium text-foreground">Привет! 👋</p>
-                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Спросите меня что угодно об Илиясе</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-200 mt-0.5">Спросите меня что угодно об Илиясе</p>
                                 {/* Arrow */}
                                 <div className="absolute right-4 -bottom-1.5 w-3 h-3 bg-background/95 border-r border-b border-primary/30 rotate-45" />
                             </motion.div>
@@ -222,7 +222,7 @@ export function ChatbotWidget() {
                                         value={input}
                                         onChange={handleInputChange}
                                         placeholder="Спросите об опыте, навыках, проектах..."
-                                        className="w-full bg-white/5 border border-white/10 focus:border-primary/50 rounded-xl pl-4 pr-12 py-3 text-sm text-white placeholder:text-gray-600 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                                        className="w-full bg-white/5 border border-white/10 focus:border-primary/50 rounded-xl pl-4 pr-12 py-3 text-sm text-white placeholder:text-gray-600 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                                     />
                                     <button
                                         type="submit"

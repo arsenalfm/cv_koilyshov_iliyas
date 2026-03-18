@@ -144,7 +144,7 @@ const timelineData = [
         period: "2010 — 2011",
         duration: "1 год",
         tag: "Старт карьеры",
-        tagColor: "bg-gray-100 text-gray-500 dark:text-gray-400 dark:bg-white/5 dark:text-gray-400",
+        tagColor: "bg-gray-100 text-gray-500 dark:text-gray-200 dark:bg-white/5 dark:text-gray-200",
         summary: "Финансовая аналитика и стратегическое планирование на старте карьеры.",
         bullets: [
             "Финансовая аналитика и бюджетирование продаж по каналам и регионам",
@@ -183,11 +183,11 @@ function TimelineCard({ item, index }: { item: typeof timelineData[0]; index: nu
                                     {item.tag}
                                 </span>
                             </div>
-                            <p className="text-sm text-gray-500 dark:text-gray-400">{item.role}</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-200">{item.role}</p>
                         </div>
                         <div className="flex items-center gap-2.5 shrink-0">
                             <div className="text-right">
-                                <div className="text-xs text-gray-500 dark:text-gray-400 font-mono">{item.period}</div>
+                                <div className="text-xs text-gray-500 dark:text-gray-200 font-mono">{item.period}</div>
                                 <div className="text-xs text-primary/80 font-mono">{item.duration}</div>
                             </div>
                             <motion.div
@@ -216,7 +216,7 @@ function TimelineCard({ item, index }: { item: typeof timelineData[0]; index: nu
                         className="overflow-hidden"
                     >
                         <div className="px-5 pb-5 pt-1 bg-white/40 dark:bg-white/[0.015] border-t border-gray-100 dark:border-white/5">
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 mb-3 italic leading-relaxed">{item.summary}</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-200 mt-3 mb-3 italic leading-relaxed">{item.summary}</p>
                             <div className="flex flex-col gap-2.5">
                                 {item.bullets.map((bullet, i) => (
                                     <motion.div
@@ -227,7 +227,7 @@ function TimelineCard({ item, index }: { item: typeof timelineData[0]; index: nu
                                         className="flex items-start gap-3"
                                     >
                                         <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                                        <span className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{bullet}</span>
+                                        <span className="text-sm text-gray-700 dark:text-gray-200 leading-relaxed">{bullet}</span>
                                     </motion.div>
                                 ))}
                             </div>
@@ -298,7 +298,7 @@ export function Timeline() {
                         <div className={color}>
                             <AnimatedCounter target={val} suffix={unit ? ` ${unit}` : ""} />
                         </div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{label}</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-200 mt-0.5">{label}</div>
                     </div>
                 ))}
             </div>

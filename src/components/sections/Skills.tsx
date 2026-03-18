@@ -83,7 +83,7 @@ export function Skills() {
                             {cat.skills.map((s) => (
                                 <span
                                     key={s}
-                                    className="px-2.5 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300 rounded-lg text-xs font-medium hover:border-primary/40 hover:text-primary transition-colors cursor-default"
+                                    className="px-2.5 py-1 bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-200 rounded-lg text-xs font-medium hover:border-primary/40 hover:text-primary transition-colors cursor-default"
                                 >
                                     {s}
                                 </span>
@@ -101,7 +101,7 @@ export function Skills() {
                     <div className="flex flex-col gap-2.5">
                         {languages.map((l) => (
                             <div key={l.lang} className="flex items-center gap-3">
-                                <span className="text-xs text-gray-600 dark:text-gray-400 w-28 shrink-0">{l.lang} <span className="text-primary text-xs">({l.level})</span></span>
+                                <span className="text-xs text-gray-600 dark:text-gray-200 w-28 shrink-0">{l.lang} <span className="text-primary text-xs">({l.level})</span></span>
                                 <div className="flex-1 h-1.5 bg-gray-200 dark:bg-white/10 rounded-full overflow-hidden">
                                     <motion.div
                                         initial={{ width: 0 }}
@@ -142,7 +142,7 @@ export function Education() {
                         <div className="flex justify-between items-start gap-3">
                             <div>
                                 <h3 className="font-semibold text-foreground text-sm">{item.university}</h3>
-                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{item.degree}</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-200 mt-0.5">{item.degree}</p>
                                 {item.image && (
                                     <p className="text-xs text-primary/60 mt-1.5 flex items-center gap-1">
                                         📄 нажмите для просмотра диплома
@@ -153,7 +153,7 @@ export function Education() {
                         </div>
                     </motion.div>
                 ))}
-                <div className="mt-2 p-3 rounded-xl bg-primary/5 border border-primary/10 text-xs text-gray-500 dark:text-gray-400">
+                <div className="mt-2 p-3 rounded-xl bg-primary/5 border border-primary/10 text-xs text-gray-500 dark:text-gray-200">
                     🎓 Выпускник РФМШ им. О.А. Жаутыкова — физмат-школа. Участник олимпиад по математике.
                 </div>
             </div>

@@ -41,7 +41,7 @@ export function TabsView() {
                             onClick={() => setActiveTab(tab.id)}
                             className={`relative flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all whitespace-nowrap ${isActive
                                     ? "text-primary bg-primary/10"
-                                    : "text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5"
+                                    : "text-gray-500 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5"
                                 }`}
                         >
                             <Icon className="w-4 h-4" />

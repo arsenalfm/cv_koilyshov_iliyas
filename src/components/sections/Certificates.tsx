@@ -125,7 +125,7 @@ export function Certificates() {
                                             <p className="text-sm font-medium leading-snug truncate text-foreground">
                                                 {cert.title}
                                             </p>
-                                            <p className="text-xs text-gray-500 mt-0.5">{cert.org}</p>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{cert.org}</p>
                                         </div>
 
                                         <div className="flex items-center gap-2 shrink-0">

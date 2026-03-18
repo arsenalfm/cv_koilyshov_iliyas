@@ -144,7 +144,7 @@ const timelineData = [
         period: "2010 — 2011",
         duration: "1 год",
         tag: "Старт карьеры",
-        tagColor: "bg-gray-100 text-gray-500 dark:bg-white/5 dark:text-gray-400",
+        tagColor: "bg-gray-100 text-gray-500 dark:text-gray-400 dark:bg-white/5 dark:text-gray-400",
         summary: "Финансовая аналитика и стратегическое планирование на старте карьеры.",
         bullets: [
             "Финансовая аналитика и бюджетирование продаж по каналам и регионам",
@@ -298,7 +298,7 @@ export function Timeline() {
                         <div className={color}>
                             <AnimatedCounter target={val} suffix={unit ? ` ${unit}` : ""} />
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5">{label}</div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{label}</div>
                     </div>
                 ))}
             </div>

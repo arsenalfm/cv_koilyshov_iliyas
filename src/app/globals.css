@@ -33,17 +33,17 @@
 }
 
 .dark {
-  /* === DARK MODE — Premium, not flat === */
-  --bg: #0D1117;
-  /* deep GitHub-style background */
-  --fg: #E6EDF3;
-  /* bright readable text */
-  --card: rgba(22, 27, 34, 0.90);
-  /* card = slightly lighter than bg */
-  --card-border: rgba(48, 54, 61, 0.8);
-  /* visible but subtle border */
-  --chat-bg: rgba(13, 17, 23, 0.98);
-  --muted: rgba(230, 237, 243, 0.06);
+  /* === DARK MODE — Premium Vercel/Linear Style === */
+  --bg: #020617;
+  /* Tailwind slate-950, deep rich black-blue */
+  --fg: #F8FAFC;
+  /* Tailwind slate-50, crisp readable text */
+  --card: rgba(255, 255, 255, 0.02);
+  /* Glass wash */
+  --card-border: rgba(255, 255, 255, 0.08);
+  /* Crisp subtle border */
+  --chat-bg: rgba(2, 6, 23, 0.95);
+  --muted: rgba(255, 255, 255, 0.05);
 }
 
 body {
@@ -59,11 +59,13 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--color-card-border);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 24px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
 }
 
 .dark .glass {
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 4px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 /* ===================== TEXT GRADIENT ===================== */
@@ -179,41 +181,4 @@ body {
   transform: translateY(-2px);
 }
 
-/* ===================== DARK MODE CONTRAST FIX ===================== */
-/* In dark mode, Tailwind's gray-500/600 is nearly invisible on dark cards.
-   Boost all "muted" text to be readable. */
-.dark .text-gray-500 {
-  color: #8B92A0;
-}
-
-.dark .text-gray-600 {
-  color: #9BA3AF;
-}
-
-.dark .text-gray-400 {
-  color: #7D8590;
-}
-
-.dark .text-gray-700 {
-  color: #A6ACBA;
-}
-
-.dark .text-gray-300 {
-  color: #C9D1D9;
-}
-
-/* Dark mode card backgrounds use proper contrast */
-.dark .bg-gray-100,
-.dark .bg-white\/50,
-.dark .bg-white\/40 {
-  background: rgba(30, 37, 48, 0.7) !important;
-}
-
-.dark .bg-white\/60 {
-  background: rgba(30, 37, 48, 0.6) !important;
-}
-
-/* Header nav links */
-.dark .border-gray-200 {
-  border-color: rgba(48, 54, 61, 0.8);
-}
+/* Removed old muddy dark mode manual overrides to let Tailwind utilities shine */

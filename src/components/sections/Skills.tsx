@@ -142,7 +142,7 @@ export function Education() {
                         <div className="flex justify-between items-start gap-3">
                             <div>
                                 <h3 className="font-semibold text-foreground text-sm">{item.university}</h3>
-                                <p className="text-xs text-gray-500 mt-0.5">{item.degree}</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{item.degree}</p>
                                 {item.image && (
                                     <p className="text-xs text-primary/60 mt-1.5 flex items-center gap-1">
                                         📄 нажмите для просмотра диплома
@@ -153,7 +153,7 @@ export function Education() {
                         </div>
                     </motion.div>
                 ))}
-                <div className="mt-2 p-3 rounded-xl bg-primary/5 border border-primary/10 text-xs text-gray-500">
+                <div className="mt-2 p-3 rounded-xl bg-primary/5 border border-primary/10 text-xs text-gray-500 dark:text-gray-400">
                     🎓 Выпускник РФМШ им. О.А. Жаутыкова — физмат-школа. Участник олимпиад по математике.
                 </div>
             </div>

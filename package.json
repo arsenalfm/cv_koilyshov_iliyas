@@ -9,10 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "^3.0.58",
-    "@ai-sdk/openai": "^3.0.41",
-    "@ai-sdk/react": "^3.0.118",
-    "ai": "^6.0.116",
+    "@ai-sdk/anthropic": "^0.0.51",
+    "@ai-sdk/openai": "^0.0.40",
+    "@ai-sdk/react": "^0.0.51",
+    "ai": "^3.4.33",
     "clsx": "^2.1.1",
     "framer-motion": "^12.36.0",
     "leaflet": "^1.9.4",

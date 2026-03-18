@@ -51,7 +51,7 @@ export function ImageLightbox({ src, title, subtitle, badge, onClose }: ImageLig
                     <div className="px-6 py-4 flex items-center justify-between border-t border-gray-100 dark:border-white/10">
                         <div>
                             <h3 className="font-bold text-foreground text-sm">{title}</h3>
-                            {subtitle && <p className="text-xs text-gray-500 mt-0.5">{subtitle}</p>}
+                            {subtitle && <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{subtitle}</p>}
                         </div>
                         {badge && <span className="text-sm font-mono font-bold text-primary">{badge}</span>}
                     </div>

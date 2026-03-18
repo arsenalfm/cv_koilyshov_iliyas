@@ -15,19 +15,38 @@ const quickQuestions = [
 export function ChatbotWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [hasBeenOpened, setHasBeenOpened] = useState(false);
+    const userInteracted = useRef(false);
+
     const { messages, input, handleInputChange, handleSubmit, append, isLoading } = useChat({
         api: "/api/chat",
     });
     const messagesEndRef = useRef<HTMLDivElement>(null);
+
+    // Auto-pop the center modal after 3.5s to WOW the user
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (!userInteracted.current) {
+                setIsOpen(true);
+                setHasBeenOpened(true);
+            }
+        }, 3500);
+        return () => clearTimeout(timer);
+    }, []);
 
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages]);
 
     const open = () => {
+        userInteracted.current = true;
         setIsOpen(true);
         setHasBeenOpened(true);
     };
+
+    const closePanel = () => {
+        userInteracted.current = true;
+        setIsOpen(false);
+    }
 
     const handleQuickQuestion = (q: string) => {
         append({ role: "user", content: q });
@@ -89,7 +108,7 @@ export function ChatbotWidget() {
                         animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
                         exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
                         className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/40 dark:bg-black/60"
-                        onClick={() => setIsOpen(false)}
+                        onClick={closePanel}
                     >
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -121,7 +140,7 @@ export function ChatbotWidget() {
                                     </div>
                                 </div>
                                 <button
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={closePanel}
                                     className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 rounded-xl transition-colors"
                                 >
                                     <X className="w-4 h-4" />

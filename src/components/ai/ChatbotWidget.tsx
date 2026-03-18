@@ -63,7 +63,7 @@ export function ChatbotWidget() {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.5, y: 20 }}
                         transition={{ type: "spring", stiffness: 300, damping: 20, delay: 1.5 }}
-                        className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
+                        className="fixed bottom-6 right-6 z-[999] flex flex-col items-end gap-3"
                     >
                         {/* Tooltip bubble */}
                         {!hasBeenOpened && (
@@ -108,7 +108,7 @@ export function ChatbotWidget() {
                         initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
                         animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
                         exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
-                        className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/40 dark:bg-black/60"
+                        className="fixed inset-0 z-[1000] flex items-center justify-center p-4 sm:p-6 bg-black/40 dark:bg-black/80"
                         onClick={closePanel}
                     >
                         <motion.div

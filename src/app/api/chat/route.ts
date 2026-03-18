@@ -84,7 +84,7 @@ export async function POST(req: Request) {
         }
 
         const result = await streamText({
-            model: openai('gpt-4o-mini'),
+            model: openai('gpt-5.4-nano'),
             system: systemPrompt,
             messages,
             temperature: 0.2, // Low temp for maximum adherence to RAG context

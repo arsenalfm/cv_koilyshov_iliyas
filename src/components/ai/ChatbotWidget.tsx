@@ -49,8 +49,15 @@ export function ChatbotWidget() {
         setIsOpen(false);
     }
 
-    const handleQuickQuestion = (q: string) => {
-        append({ role: "user", content: q });
+    const handleQuickQuestion = async (q: string) => {
+        try {
+            await append({ role: "user", content: q });
+        } catch (err) {
+            console.error("Append error:", err);
+            // Fallback: manually set input and submit if append fails
+            // setInput(q);
+            // setTimeout(() => handleSubmit(), 50);
+        }
     };
 
     return (
@@ -133,10 +140,10 @@ export function ChatbotWidget() {
                                         <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-[#0f172a]" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-white text-sm">AI Ассистент Илияса</h3>
+                                        <h3 className="font-bold text-slate-100 text-sm">AI Ассистент Илияса</h3>
                                         <div className="flex items-center gap-1.5">
                                             <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-                                            <p className="text-xs text-green-400">Онлайн</p>
+                                            <p className="text-xs text-green-400 font-medium">Онлайн</p>
                                         </div>
                                     </div>
                                 </div>

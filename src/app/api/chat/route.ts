@@ -58,9 +58,9 @@ export async function POST(req: Request) {
         const { messages } = await req.json();
 
         // Check if API key is present
-        if (!process.env.OPENAI_API_KEY) {
-            console.error("Missing OPENAI_API_KEY in environment variables.");
-            return new Response("Missing OPENAI_API_KEY", { status: 500 });
+        if (!process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
+            console.error("Missing GOOGLE_GENERATIVE_AI_API_KEY in environment variables.");
+            return new Response("Missing GOOGLE_GENERATIVE_AI_API_KEY", { status: 500 });
         }
 
         const result = await streamText({

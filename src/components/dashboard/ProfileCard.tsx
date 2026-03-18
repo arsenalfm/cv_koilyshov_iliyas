@@ -81,11 +81,11 @@ export function ProfileCard() {
                 </div>
 
                 <div className="flex items-center gap-2 pt-3 border-t border-gray-200 dark:border-white/10">
-                    <a href="#" className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl bg-gray-50 dark:bg-white/5 hover:bg-primary/10 hover:text-primary border border-gray-200 dark:border-white/5 text-gray-500 dark:text-gray-200 transition-all text-xs font-medium">
+                    <a href="https://www.linkedin.com/in/iliyas-koilyshov/" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl bg-gray-50 dark:bg-white/5 hover:bg-primary/10 hover:text-primary border border-gray-200 dark:border-white/5 text-gray-500 dark:text-gray-200 transition-all text-xs font-medium">
                         <Linkedin className="w-4 h-4" />
                         LinkedIn
                     </a>
-                    <a href="#" className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl bg-gray-50 dark:bg-white/5 hover:bg-primary/10 hover:text-primary border border-gray-200 dark:border-white/5 text-gray-500 dark:text-gray-200 transition-all text-xs font-medium">
+                    <a href="https://t.me/ikoilyshov" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-2 rounded-xl bg-gray-50 dark:bg-white/5 hover:bg-primary/10 hover:text-primary border border-gray-200 dark:border-white/5 text-gray-500 dark:text-gray-200 transition-all text-xs font-medium">
                         <Send className="w-4 h-4" />
                         Telegram
                     </a>

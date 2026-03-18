@@ -90,7 +90,7 @@ export async function POST(req: Request) {
             temperature: 0.2, // Low temp for maximum adherence to RAG context
         });
 
-        return result.toTextStreamResponse();
+        return result.toDataStreamResponse();
     } catch (error) {
         console.error("Chat API error:", error);
         return new Response("Error connecting to AI", { status: 500 });

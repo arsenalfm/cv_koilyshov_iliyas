@@ -219,14 +219,14 @@ export function ChatbotWidget() {
                             <form onSubmit={handleSubmit} className="p-4 border-t border-white/5 bg-white/[0.02]">
                                 <div className="relative flex items-center">
                                     <input
-                                        value={input}
+                                        value={input || ""}
                                         onChange={handleInputChange}
                                         placeholder="Спросите об опыте, навыках, проектах..."
                                         className="w-full bg-white/5 border border-white/10 focus:border-primary/50 rounded-xl pl-4 pr-12 py-3 text-sm text-white placeholder:text-gray-600 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
                                     />
                                     <button
                                         type="submit"
-                                        disabled={isLoading || !input.trim()}
+                                        disabled={isLoading || !(input || "").trim()}
                                         className="absolute right-1.5 w-9 h-9 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-primary-hover disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-95"
                                     >
                                         <Send className="w-3.5 h-3.5" />

@@ -64,7 +64,7 @@ export async function POST(req: Request) {
         }
 
         const result = await streamText({
-            model: google('models/gemini-1.5-flash-latest'),
+            model: google('gemini-1.5-flash'),
             system: systemPrompt,
             messages,
             temperature: 0.2, // Low temp for maximum adherence to RAG context
